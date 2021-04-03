@@ -1,0 +1,312 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- stress:
+    use_entities: true
+- stress_desc:
+    use_entities: true
+- anxiety:
+    use_entities: true
+- query_jumping_to_conclusion:
+    use_entities: true
+- ex_jumping_to_conclusion:
+    use_entities: true
+- thought_desc:
+    use_entities: true
+- worry_true_percentage:
+    use_entities: true
+- worry_evidence:
+    use_entities: true
+- counter_thought:
+    use_entities: true
+- got_it:
+    use_entities: true
+- query_distortion:
+    use_entities: true
+- query_catastrophizing:
+    use_entities: true
+- ex_catastrophizing:
+    use_entities: true
+- mood_check:
+    use_entities: true
+- chitchat:
+    use_entities: true
+- mood_neutral:
+    use_entities: true
+- ask_fav_book:
+    use_entities: true
+- try_bot_fav:
+    use_entities: true
+entities:
+- name
+- worry_related_to
+- percentage
+slots:
+  worry_related_to:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_yes:
+  - text: Sure!
+  - text: Yep
+  - text: Yeah
+  - text: Of course!
+  utter_ask_spot_distortion:
+  - buttons:
+    - payload: Distortion? What is that?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Let's try to understand why you are thinking this way and recognize any negative patterns.  We can then reframe the thought to change how you feel. One way to do that is to spot the 'distortion' in your thoughts? Are you ready to spot it?
+  - buttons:
+    - payload: Distortion? What is that?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    text: We can attempt to improve your mood by recognizing negative patterns and reframe the negative thoughts into positive ones. One way to do this is to spot the 'distortion' in your thoughts? Are you ready to spot it?
+  utter_info_distortion:
+  - buttons:
+    - payload: Ok
+      title: Ok
+    text: Cognitive distortions are simply ways that our mind convinces us of something that isn't true. These inaccurate thoughts reinforce negative thinking or emotions and keep us feeling bad about ourselves.
+  utter_ask_spot distortion_again:
+  - buttons:
+    - payload: No
+      title: No
+    - payload: Yes
+      title: Yes
+    text: Let's spot if any cognitive distortions are leading to your thoughts. Are you ready?
+  utter_ask_catastrophizing:
+  - buttons:
+    - payload: Catastrophizing? What is that?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Is your thought an example of “catastrophizing”?
+  utter_info_catastrophizing:
+  - buttons:
+    - payload: Can you give some examples of catastrophizing?
+      title: Can you give some examples?
+    - payload: Ok
+      title: Ok
+    text: One common type of cognitive distortion is called catastrophizing. When catastrophizing, the importance of a problem is exaggerated, or the worst possible outcome is assumed to be true.
+  utter_ex_catastrophizing:
+  - buttons:
+    - payload: Ok
+      title: Ok
+    text: For example, someone might worry that they’ll fail an exam. From there, they might assume that failing an exam means they’re a bad student and bound to never pass, get a degree, or find a job. They might conclude that this means they’ll never be financially stable.
+  utter_ask_catastrophizing_again:
+  - buttons:
+    - payload: No
+      title: No
+    - payload: Yes
+      title: Yes
+    text: So do you think there is any “catastrophizing” in your thoughts?
+  utter_is_jumping_to_conclusion:
+  - buttons:
+    - payload: Jumping to conclusion? What is that?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Is your thought an example of “jumping to conclusions” i.e. predicting the future or reading minds?
+  - buttons:
+    - payload: Jumping to conclusion? What is that?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Are you predicting the future or reading someone's mind in this thought (jumping to conclusions)?
+  utter_info_jumping_to_conclusion:
+  - buttons:
+    - payload: Can you give some examples of Jumping to conclusion?
+      title: Can you give some examples?
+    - payload: Ok
+      title: Ok
+    text: Jumping to conclusions is one of the most common forms of negative thinking. The problem with this type of a cognitive distortion is that conclusions are in most cases negative; catastrophically negative. You usually jump to a negative conclusion without any justifiable facts of the situation or reality. In the next step, you start torturing yourself with how unlucky you are.
+  utter_ex_jumping_to_conclusion:
+  - buttons:
+    - payload: Ok
+      title: Ok
+    text: For example, a student may “fortune-tell” by assuming that the readers of his or her paper have already made up their minds concerning its topic, and, therefore, writing the paper is a pointless exercise. Another example, someone may do “mind-reading” by assuming that some group of people don’t like him/her and they make fun of him/her.
+  utter_ask_jumping_to_conclusion_again:
+  - buttons:
+    - payload: No
+      title: No
+    - payload: Yes
+      title: Yes
+    text: So do you think there is any “jumping to conclusions” in your thoughts?
+  utter_found_distortion:
+  - text: Ok, so we found a distortion. Now let us try to tackle this.
+  utter_jumping_to_conclusion_quote:
+  - text: All you have to do is to make sure your mind is not a negative crystal ball that only sees misery in your future.
+  utter_cognitive_restructuring:
+  - buttons:
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: May be later
+    text: By learning to question your thoughts, you can correct any such thoughts. This technique is called cognitive restructuring. Do you want to start now?
+  utter_ask_thought:
+  - text: What is your worrying thought?
+  - text: What is it that's troubling you?
+  - text: what is causing you distress?
+  - text: Why are you anxious?
+  - text: What are your thoughts?
+  - text: What is worrying you?
+  utter_worry_relation:
+  - text: Ok, so your worry is related to {worry_related_to}. Is that right?
+  - text: Ok, so is your worry related to {worry_related_to}?
+  utter_worry_identified:
+  - text: 'Ok so the first phase is done! Let’s try to further analyze your worry. '
+  utter_ask_reframe_worry:
+  - text: Please reframe your thought so that I can understand better
+  utter_ask_worry_true_percentage:
+  - text: How likely is it that your worry/prediction will come true? (Give a percentage 0-100)
+  utter_ask_worry_evidence:
+  - buttons:
+    - payload: No
+      title: No
+    - payload: Yes
+      title: Yes
+    text: Ok, can you provide evidence to support your worry?
+  utter_carry_on:
+  - text: Ok, go ahead
+  - text: Ok, carry on
+  - text: Go on
+  utter_any_more:
+  - buttons:
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Ok, any other example?
+  - buttons:
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Would you like to add more?
+  - buttons:
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Can you think of more such events?
+  utter_ask_counter_thought:
+  - text: Ok can you provide any event that is against your thought or that can reduce the probability of your thought coming true?
+  - text: Ok now, can you give a counterexample to your thoughts?
+  utter_jumping_to_conclusion_counter_thought:
+  - text: Let me start with the first one - You cannot predict the future nor read others’ minds.
+  utter_complete_cbt:
+  - text: So you have successfully thought of some positive events. Why don’t we concentrate on these events and happy thoughts instead of your previous bad thoughts? Remember, “Your thoughts carry you wherever you want to go.”
+  utter_greet:
+  - text: Hey! How are you?😊
+  - text: Hey, what’s going on?😊
+  - text: Hi! What’s up?😊
+  - text: Hello😊! what's on your mind?
+  - text: Hey there how are you? How was your day?😊
+  - text: Hello buddy😊! Nice to see you, what’s going on?
+  - text: I am glad you are here, hello😊! It has been a long time since we talked
+  utter_cheer_up:
+  - text: Someday we do feel sad about what is happening around us and within us.  But remember friend, there is a silver lining to every cloud. Things will surely change and everything will get back to normal.
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Do you feel better?
+  utter_happy:
+  - text: Great, carry on!🥳🥳🥳
+  - text: Keep going!🥳🥳🥳
+  - text: Thats great!🥳🥳🥳
+  - text: I am always there for you!😊
+  - text: Glad I could help😊
+  - text: Yaay!🥳🥳🥳
+  utter_stress:
+  - text: What all work is there in your hand right now?
+  - text: Looks like you have a very hectic schedule
+  - text: Some new project?
+  - text: Can I know more about your thoughts that are causing stress so maybe we can try replacing them with more useful thoughts.
+  utter_assignment:
+  - text: Which subject assignments need to be done?
+  - text: Some new project?
+  utter_goodbye:
+  - text: Bye👋🏻👋🏻
+  - text: Talk to you some time later👋🏻👋🏻
+  - text: Good day!😊👋🏻
+  utter_support:
+  - text: |
+      No worries
+  - text: |
+      No problem
+  utter_motivation:
+  - text: 'Try focusing on each assignment one by one, you can work on the assignment having the closest deadline. Try not to think of everything at once as it may feel like a lot of work. Let’s go step by step! '
+  - text: That’s great! Let’s start working on that assignment first
+  - text: I know you Have a busy schedule but try taking out around 1 hour just to relax a bit and try doing what you love. Trust me it will surely speed up your work and get your assignments done faster.
+  - text: Hey, you can try discussing your assignments with your friends or try reading up supplementary material from the internet. Doing the work with someone will surely be interesting, will you please give it a try?
+  utter_menu:
+  - buttons:
+    - payload: Mood Check
+      title: Mood Check
+    - payload: Anxiety Management
+      title: Anxiety management
+    - payload: Casual chitchat
+      title: Casual chitchat
+    text: Which feature do you want to try?
+  utter_ask_mood:
+  - buttons:
+    - payload: Great
+      title: 😀
+    - payload: Sad
+      title: ☹️
+    - payload: Neutral
+      title: 😐
+    - payload: Stressed
+      title: 😖
+    text: |
+      How are you feeling today?
+  utter_iamabot:
+  - text: My name is Sara Zazen. I am a bot, powered by Rasa.🤖
+  utter_chitchat:
+  - text: Ok let's have some fun!
+  - text: Yay let's spend some time talking!
+  - text: Ok let's go!!
+  utter_fav_book:
+  - text: To Kill a Mockingbird by Harper Lee is my favourite classic. It's just too well written. Have you read it?
+  utter_read_fav:
+  - text: You should read it! It's an eye-opener
+actions:
+- utter_chitchat
+- utter_fav_book
+- utter_read_fav
+forms: {}
+e2e_actions: []

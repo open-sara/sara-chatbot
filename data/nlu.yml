@@ -1,0 +1,280 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - heelo
+    - Hello
+    - Hi
+- intent: mood_check
+  examples: |
+    - Mood Check
+- intent: chitchat
+  examples: |
+    - Casual chitchat
+- intent: anxiety
+  examples: |
+    - Anxiety Management
+    - I feel anxious
+    - I am going through anxiety
+    - anxious
+    - anxiety maxx
+    - I am at anixiety max
+    - I am panicking
+    - Panic
+    - Paniccc
+    - Extreme panic
+    - extreme anxiety
+    - I am feeling anxious
+    - anxiety
+    - I am anxious
+    - Too much anxiety
+    - anx_mang
+- intent: query_jumping_to_conclusion
+  examples: |
+    - Jumping to conclusion? What is that?
+    - What is jumping to conclusion?
+    - Can you explain jumping to conclusion?
+- intent: query_distortion
+  examples: |
+    - What is distortion?
+    - Distortion? What is that?
+    - Can you explain the meaning of distortion?
+- intent: ex_jumping_to_conclusion
+  examples: |
+    - Can you give some jumping to conclusion examples?
+    - I didn't understand. Do you have any examples for jumping to conclusion?
+    - Can you give some examples of Jumping to conclusion?
+- intent: thought_desc
+  examples: |
+    - [exam](worry_related_to)
+    - I am worried about my [exams](worry_related_to), in a recently conducted exam I was unable to answer many of the questions.
+    - I don’t think there is any chance of me succeeding in the upcoming [exams](worry_related_to).
+    - I am not going to perform well in [exam](worry_related_to)
+    - I am going to fail in the [exam](worry_related_to) even though I studied a lot
+    - I had an [assignment](worry_related_to) deadline yesterday and I was not able to complete it properly.
+    - I am sure I will be the least mark performing student for the [assignment](worry_related_to)
+    - I had my [job](worry_related_to) interview today and I could not answer a basic question asked by the interviewers.
+    - I had a [job](worry_related_to) interview and it went exactly opposite to my expectation. I could not answer many of the questions. I think I will never get a good job.
+    - I think I will never get a good [job](worry_related_to).
+    - We had a [presentation](worry_related_to) today and it did not go according to my expectation.
+    - I am going to fail in the [exam](worry_related_to)
+    - I am going to fail in [exam](worry_related_to)
+    - I an going to fail in the [exam](worry_related_to) even though I studied a lot
+    - I will fail in [exams](worry_related_to)
+    - [Exams](worry_related_to) are coming and I will fail
+    - I have [exams](worry_related_to) coming and I can't handle the studies
+    - I am going to fail in [exam](worry_related_to) even though I studied a lot
+    - [exams](worry_related_to) are coming and I'm nervous
+    - I have [exams](worry_related_to) next week and I'm under prepared
+    - I am worried about my [exams](worry_related_to)
+    - I have [exams](worry_related_to) next week
+    - I have [exams](worry_related_to)
+    - we have [exams](worry_related_to) next week
+    - [exams](worry_related_to) are coming
+- intent: worry_true_percentage
+  examples: |
+    - [50](percentage)
+    - [100](percentage)
+    - [60](percentage)
+    - [70](percentage)
+    - [80](percentage)
+    - [90](percentage)
+    - [40](percentage)
+    - [30](percentage)
+    - [20](percentage)
+    - [10](percentage)
+    - [5](percentage)
+    - [25](percentage)
+    - [75](percentage)
+    - [99](percentage)
+    - [35](percentage)
+    - [55](percentage)
+- intent: worry_evidence
+  examples: |
+    - I was not able to understand the subject
+    - I was struggling with practice questions and took much more time than I should to answer the questions
+    - I was struggling with practice questions
+    - I couldn't answer many questions in class
+    - I couldn't solve some practice questions
+    - I was unable to understand some topics
+    - I couldn't answer practice questions
+    - I didn't revise enough
+    - I got stuck in many questions
+    - I didn't understand some concepts
+    - I couldn't answer some questions in class
+    - I did not understand the subject
+    - I was not understand the subject
+- intent: counter_thought
+  examples: |
+    - I worked hard and practiced many questions
+    - This year, my performance was decent in all the exams except for the last one.
+    - I can answer any questions in the class.
+    - I understood the topics
+    - I understood the concepts
+    - I can usually answer questions in class
+    - I could explain many of the concepts to my friends
+    - My last exam went well
+    - My topper friend helped me this time
+    - I worked very hard this time
+    - I worked extremely hard
+    - I revised thoroughly
+    - I revised well
+    - I practiced several questions
+    - I did lots of revision
+    - I worked hard
+    - The topics I didn't understand most probably won't be asked in the exam
+    - I practised questions
+- intent: goodbye
+  examples: |
+    - It was nice talking to you
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - ttyl
+    - talk to you later
+- intent: got_it
+  examples: |
+    - ok
+    - Got it
+    - I will remember that
+    - ok thanks
+    - Got that
+    - Cool
+    - alright
+    - aight
+    - Ok
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - I will try doing that
+    - Yes, I will start working on that
+    - Yes sure. Thanks for the advice!
+    - YES
+    - Yes
+    - yes, thanks!
+    - Yeah
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - No
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am Great!
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - upset
+    - I am upset
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+- intent: mood_neutral
+  examples: |
+    - Neutral
+    - I feel neutral
+    - Neither happy nor sad
+- intent: stress
+  examples: |
+    - Stressed
+    - I feel stressed
+    - Too much stress
+    - I am stressed
+    - I have so much work to do, I am really stressed
+    - Too many assignments, too less time
+    - Continuous deadlines, I am not getting any free time
+    - It was pretty hectic, and I am nowhere near to completing my work
+    - I am really busy nowadays
+    - Coming week is my quiz week and I need to prepare for all the exams, I am really stressed
+- intent: stress_desc
+  examples: |
+    - In the upcoming week I have many assignment deadlines, only thinking of which I am getting tired of
+    - regular classwork and assignments, I am really tired
+- intent: ex_catastrophizing
+  examples: |
+    - Can you give some examples of catastrophizing?
+    - I didn't understand. Do you have any examples of catastrophizing?
+    - Do you have any examples of catastrophizing?
+- intent: query_catastrophizing
+  examples: |
+    - What is catastrophizing?
+    - Can you explain catastrophizing?
+    - Catastrophizing? What is that?
+- intent: ask_fav_book
+  examples: |
+    - what is your favourite book?
+    - what's your favourite book
+    - so what is your favourite book
+    - ok what's your favourite book?
+    - Which book do you like?
+    - What is the novel you like to read?
+    - what is your favourite book
+- intent: try_bot_fav
+  examples: |
+    - ok i'll try it
+    - ok I will try it
+    - ok I will try that
+- intent: chit_chat
+  examples: |
+    - chit_chat

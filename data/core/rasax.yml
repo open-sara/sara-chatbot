@@ -1,0 +1,33 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 61c4a6f0d82e477fa1a6f859a2d8b78d
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: affirm
+  - action: utter_is_jumping_to_conclusion
+  - intent: affirm
+  - action: utter_found_distortion
+  - action: utter_jumping_to_conclusion_quote
+  - action: utter_cognitive_restructuring
+  - intent: deny
+  - action: utter_support
+  - action: utter_goodbye

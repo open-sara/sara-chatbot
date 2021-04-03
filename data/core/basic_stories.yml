@@ -1,0 +1,148 @@
+version: "2.0"
+stories:
+- story: mood check mood happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_great
+  - action: utter_happy
+- story: mood check mood_sad happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: mood check mood_sad sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: mood check mood neutral
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: mood check mood_neutral sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: mood check mood stressed
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: mood check stress sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_fav_book
+  - action: utter_fav_book
+  - intent: deny
+  - action: utter_read_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+- story: Story alt from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_book
+  - action: utter_fav_book
+  - intent: deny
+  - action: utter_read_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+- story: Story alt 2 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_book
+  - action: utter_fav_book
+  - intent: affirm
+  - action: utter_happy
+- story: Story alt 3 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_book
+  - action: utter_fav_book
+  - intent: affirm
+  - action: utter_happy
+  - intent: bot_challenge
+  - action: utter_iamabot
+- story: Story from Conversation ID f27db87c283440949437f4c173ac79c8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_book
+  - action: utter_fav_book
+  - intent: deny
+  - action: utter_read_fav
+  - intent: try_bot_fav
+  - action: utter_happy
