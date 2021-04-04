@@ -260,9 +260,9 @@ responses:
   - text: Which subject assignments need to be done?
   - text: Some new project?
   utter_goodbye:
-  - text: Bye👋🏻👋🏻
-  - text: Talk to you some time later👋🏻👋🏻
-  - text: Good day!😊👋🏻
+  - text: Bye👋
+  - text: Talk to you some time later👋👋
+  - text: Good day!😊👋
   utter_support:
   - text: |
       No worries
@@ -289,7 +289,7 @@ responses:
     - payload: Sad
       title: ☹️
     - payload: Neutral
-      title: 😐
+      title: :|
     - payload: Stressed
       title: 😖
     text: |
