@@ -287,9 +287,9 @@ responses:
     - payload: Great
       title: 😀
     - payload: Sad
-      title: ☹️
+      title: :(
     - payload: Neutral
-      title: :|
+      title: 😐
     - payload: Stressed
       title: 😖
     text: |
