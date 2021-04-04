@@ -232,25 +232,25 @@ responses:
   utter_complete_cbt:
   - text: So you have successfully thought of some positive events. Why don’t we concentrate on these events and happy thoughts instead of your previous bad thoughts? Remember, “Your thoughts carry you wherever you want to go.”
   utter_greet:
-  - text: Hey! How are you?😊
-  - text: Hey, what’s going on?😊
-  - text: Hi! What’s up?😊
-  - text: Hello😊! what's on your mind?
-  - text: Hey there how are you? How was your day?😊
-  - text: Hello buddy😊! Nice to see you, what’s going on?
-  - text: I am glad you are here, hello😊! It has been a long time since we talked
+  - text: Hey! How are you?
+  - text: Hey, what’s going on?
+  - text: Hi! What’s up?
+  - text: Hello! what's on your mind?
+  - text: Hey there how are you? How was your day?
+  - text: Hello buddy! Nice to see you, what’s going on?
+  - text: I am glad you are here, hello! It has been a long time since we talked
   utter_cheer_up:
   - text: Someday we do feel sad about what is happening around us and within us.  But remember friend, there is a silver lining to every cloud. Things will surely change and everything will get back to normal.
   utter_did_that_help:
   - text: Did that help you?
   - text: Do you feel better?
   utter_happy:
-  - text: Great, carry on!🥳🥳🥳
-  - text: Keep going!🥳🥳🥳
-  - text: Thats great!🥳🥳🥳
-  - text: I am always there for you!😊
-  - text: Glad I could help😊
-  - text: Yaay!🥳🥳🥳
+  - text: Great, carry on!
+  - text: Keep going!
+  - text: Thats great!
+  - text: I am always there for you!
+  - text: Glad I could help
+  - text: Yaay!
   utter_stress:
   - text: What all work is there in your hand right now?
   - text: Looks like you have a very hectic schedule
@@ -260,9 +260,9 @@ responses:
   - text: Which subject assignments need to be done?
   - text: Some new project?
   utter_goodbye:
-  - text: Bye👋
-  - text: Talk to you some time later👋👋
-  - text: Good day!😊👋
+  - text: Bye
+  - text: Talk to you some time later
+  - text: Good day!
   utter_support:
   - text: |
       No worries
@@ -285,17 +285,17 @@ responses:
   utter_ask_mood:
   - buttons:
     - payload: Great
-      title: 😀
+      title: :D
     - payload: Sad
       title: :(
     - payload: Neutral
-      title: 😐
+      title: :|
     - payload: Stressed
-      title: 😖
+      title: :Z
     text: |
       How are you feeling today?
   utter_iamabot:
-  - text: My name is Sara Zazen. I am a bot, powered by Rasa.🤖
+  - text: My name is Sara Zazen. I am a bot, powered by Rasa.
   utter_chitchat:
   - text: Ok let's have some fun!
   - text: Yay let's spend some time talking!
