@@ -9,7 +9,7 @@ health issues and maintain mental wellbeing.
 The chatbot has been deployed on the Telegram app.
 It can be accessed by
 
-- Searching for the username sarazazen_chatbot in thesearch bar
+- Searching for the username sarazazen_chatbot in the search bar
 - Directly access the chatbot using the link http://t.me/sarazazen_chatbot
 
 ## Features of the chatbot -
