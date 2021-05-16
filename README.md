@@ -10,23 +10,17 @@ The chatbot has been deployed on the Telegram app.
 It can be accessed by
 
 - Searching for the username sarazazen_chatbot in thesearch bar
-- Directly access the chatbot using the linkhttp://t.me/sarazazen_chatbot
+- Directly access the chatbot using the link http://t.me/sarazazen_chatbot
 
 ## Features of the chatbot -
-
-```
-● Daily mood check
-○ In this feature, the user can perform mood and emotionsanalysis by conversing with the chatbot
-● Anxiety Management
-○ This feature helps the user to perform thought distortionanalysis by answering the questions answered by the bot. Chatbotprovides Cognitive Behavioral Therapy accordingly.
-● Casual chit chat
-○ User can have a friendly conversation with the botwhere the user can ask about the bot’s favourite novel, songs, movies andhobby. This feature also involves storytelling and Joke telling.
-```
+- Daily mood check: In this feature, the user can perform mood and emotions analysis by conversing with the chatbot
+- Anxiety Management: This feature helps the user to perform thought distortion analysis by answering the questions answered by the bot. Chatbot provides Cognitive Behavioral Therapy accordingly.
+- Casual chit chat: User can have a friendly conversation with the bot where the user can ask about the bot’s favourite novel, songs, movies and hobby. This feature also involves storytelling and Joke telling.
 ## How to use the chatbot -
 
 - User can start a new conversation by greeting the bot
 - The feature can be chosen from the menu displayed
-- In case the chatbot does not understand the user’smessage, the bot displays a message saying ‘Sorry I did not understand, could you please restart the conversation... Just type ‘Hello’’. So the user canstart a fresh conversation by greeting the bot.
+- In case the chatbot does not understand the user’s message, the bot displays a message saying ‘Sorry I did not understand, could you please restart the conversation... Just type ‘Hello’’. So the user can start a fresh conversation by greeting the bot.
 
 ## Demo video for the chatbot -
 
