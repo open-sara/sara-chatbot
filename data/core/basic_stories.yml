@@ -8,7 +8,12 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: mood_great
-  - action: utter_happy
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
 - story: mood check mood_sad happy path
   steps:
   - intent: greet
@@ -17,10 +22,12 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
 - story: mood check mood_sad sad path
   steps:
   - intent: greet
@@ -29,10 +36,12 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
 - story: mood check mood neutral
   steps:
   - intent: greet
@@ -41,10 +50,12 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: mood_neutral
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
 - story: mood check mood_neutral sad path
   steps:
   - intent: greet
@@ -53,10 +64,12 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: mood_neutral
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
 - story: mood check mood stressed
   steps:
   - intent: greet
@@ -65,10 +78,12 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: stress
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
 - story: mood check stress sad path
   steps:
   - intent: greet
@@ -77,10 +92,264 @@ stories:
   - intent: mood_check
   - action: utter_ask_mood
   - intent: stress
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_photo_mood_great
+  - action: utter_new
+- story: mood check mood_sad happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_sad sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood neutral
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_neutral sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood stressed
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check stress sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_great
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_sad happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_sad sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood neutral
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_neutral sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood stressed
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check stress sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_photo_mood1
+  - intent: mood_great
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_sad happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_sad sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_unhappy
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood neutral
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood_neutral sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: mood_neutral
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check mood stressed
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
+- story: mood check stress sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: mood_check
+  - action: utter_ask_mood
+  - intent: stress
+  - action: utter_photo_mood1
+  - intent: mood_unhappy
+  - action: utter_photo_mood2
+  - intent: mood_unhappy
+  - action: utter_mood_guide
+  - action: utter_new
 - story: Story from Conversation ID 6a9771d108fb4f5692351efb8601d161
   steps:
   - intent: greet
@@ -96,6 +365,7 @@ stories:
   - action: utter_read_fav
   - intent: try_bot_fav
   - action: utter_happy
+  - action: utter_new
 - story: Story alt from Conversation ID 6a9771d108fb4f5692351efb8601d161
   steps:
   - intent: greet
@@ -109,6 +379,7 @@ stories:
   - action: utter_read_fav
   - intent: try_bot_fav
   - action: utter_happy
+  - action: utter_new
 - story: Story alt 2 from Conversation ID 6a9771d108fb4f5692351efb8601d161
   steps:
   - intent: greet
@@ -120,21 +391,23 @@ stories:
   - action: utter_fav_book
   - intent: affirm
   - action: utter_happy
-- story: Story alt 3 from Conversation ID 6a9771d108fb4f5692351efb8601d161
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: ask_fav_book
-  - action: utter_fav_book
-  - intent: affirm
-  - action: utter_happy
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - action: utter_new
+# - story: Story alt 3 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_menu
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   - intent: ask_fav_book
+#   - action: utter_fav_book
+#   - intent: affirm
+#   - action: utter_happy
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   - action: utter_new
 - story: Story from Conversation ID f27db87c283440949437f4c173ac79c8
-  steps:
+  steps:   
   - intent: greet
   - action: utter_greet
   - action: utter_menu
@@ -146,3 +419,283 @@ stories:
   - action: utter_read_fav
   - intent: try_bot_fav
   - action: utter_happy
+  - action: utter_new
+- story: Story fav song from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_fav_song
+  - action: utter_fav_song
+  - intent: deny
+  - action: utter_listen_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav song alt from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_song
+  - action: utter_fav_song
+  - intent: deny
+  - action: utter_listen_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav song alt 2 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_song
+  - action: utter_fav_song
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+# - story: Story fav song alt 3 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_menu
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   - intent: ask_fav_song
+#   - action: utter_fav_song
+#   - intent: affirm
+#   - action: utter_happy
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   - action: utter_new
+- story: Story fav song from Conversation ID f27db87c283440949437f4c173ac79c8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_song
+  - action: utter_fav_song
+  - intent: deny
+  - action: utter_listen_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav movie from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_fav_movie
+  - action: utter_fav_movie
+  - intent: deny
+  - action: utter_watch_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav movie alt from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_movie
+  - action: utter_fav_movie
+  - intent: deny
+  - action: utter_watch_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav movie alt 2 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_movie
+  - action: utter_fav_movie
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+# - story: Story fav movie alt 3 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_menu
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   - intent: ask_fav_movie
+#   - action: utter_fav_movie
+#   - intent: affirm
+#   - action: utter_happy
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   - action: utter_new
+- story: Story fav movie from Conversation ID f27db87c283440949437f4c173ac79c8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_movie
+  - action: utter_fav_movie
+  - intent: deny
+  - action: utter_watch_fav
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav hobby from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_fav_hobby
+  - action: utter_fav_hobby
+  - intent: deny
+  - action: utter_try_hobby
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav hobby alt from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_hobby
+  - action: utter_fav_hobby
+  - intent: deny
+  - action: utter_try_hobby
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story fav hobby alt 2 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_hobby
+  - action: utter_fav_hobby
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+# - story: Story fav hobby alt 3 from Conversation ID 6a9771d108fb4f5692351efb8601d161
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_menu
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   - intent: ask_fav_hobby
+#   - action: utter_fav_hobby
+#   - intent: affirm
+#   - action: utter_happy
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   - action: utter_new
+- story: Story fav hobby from Conversation ID f27db87c283440949437f4c173ac79c8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: ask_fav_hobby
+  - action: utter_fav_hobby
+  - intent: deny
+  - action: utter_try_hobby
+  - intent: try_bot_fav
+  - action: utter_happy
+  - action: utter_new
+- story: Story from Conversation ID 61c22f67a72a442284c8b5a71dbb0ffd
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: tell_story
+  - action: utter_tell_story
+  - action: utter_like_story
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: Story from Conversation ID f688ec76ee1041818badc2ea50c18c1e
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: restart
+  - action: action_restart
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: ex_catastrophizing
+  - action: utter_yes
+  - action: utter_ex_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: ex_jumping_to_conclusion
+  - action: utter_yes
+  - action: utter_ex_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: deny
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion
+  - action: utter_jumping_to_conclusion_quote
+  - action: utter_cognitive_restructuring
+  - intent: deny
+  - action: utter_support
+  - action: utter_goodbye
+  - action: utter_new

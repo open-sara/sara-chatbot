@@ -25,9 +25,298 @@ stories:
   - intent: affirm
   - action: utter_is_jumping_to_conclusion
   - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: deny
   - action: utter_found_distortion
   - action: utter_jumping_to_conclusion_quote
   - action: utter_cognitive_restructuring
   - intent: deny
   - action: utter_support
   - action: utter_goodbye
+  - action: utter_new
+- story: Story from Conversation ID c84fdf74ae96427784181086a01fe8d6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: affirm
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion
+  - action: utter_jumping_to_conclusion_quote
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+
+- story: Story from Conversation ID b29a5396336a4be5bea5cf14fa8e59d5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: deny
+  - action: utter_support
+  - action: utter_goodbye
+  - action: utter_new
+- story: Alt Story from Conversation ID b29a5396336a4be5bea5cf14fa8e59d5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: deny
+  - action: utter_support
+  - action: utter_goodbye
+  - action: utter_new
+- story: Story from Conversation ID d03d72ddfffb488180d9e953005656bb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: affirm
+  - action: utter_is_jumping_to_conclusion
+  - intent: deny
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '77'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+
+- story: Story from Conversation ID 43e9d019d1124625a40f2ae019d5da13
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exams
+  - slot_was_set:
+    - worry_related_to: exams
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: affirm
+  - action: utter_is_jumping_to_conclusion
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: affirm
+  - action: utter_found_distortion
+  - action: utter_jumping_to_conclusion_quote
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '55'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - slot_was_set:
+    - worry_related_to: exams
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+  
+- story: Story from Conversation ID 1d06c78235a348efb52210117ecc878b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: motivation_productivity
+  - action: utter_try_motive
+  - intent: affirm
+  - action: utter_mot1
+  - intent: deny
+  - action: utter_mot2
+  - intent: deny
+  - action: utter_mot3
+  - intent: deny
+  - action: utter_mot4
+  - intent: affirm
+  - action: utter_motive_sad
+  - action: utter_new
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: motivation_productivity
+  - action: utter_try_motive
+  - intent: affirm
+  - action: utter_mot1
+  - intent: affirm
+  - action: utter_mot2
+  - intent: affirm
+  - action: utter_mot3
+  - intent: affirm
+  - action: utter_mot4
+  - intent: affirm
+  - action: utter_motive_sad
+  - action: utter_new
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: motivation_productivity
+  - action: utter_try_motive
+  - intent: affirm
+  - action: utter_mot1
+  - intent: deny
+  - action: utter_mot2
+  - intent: deny
+  - action: utter_mot3
+  - intent: affirm
+  - action: utter_mot4
+  - intent: deny
+  - action: utter_motive_sad
+  - action: utter_new
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: motivation_productivity
+  - action: utter_try_motive
+  - intent: affirm
+  - action: utter_mot1
+  - intent: affirm
+  - action: utter_mot2
+  - intent: affirm
+  - action: utter_mot3
+  - intent: deny
+  - action: utter_mot4
+  - intent: affirm
+  - action: utter_motive_happy
+  - action: utter_new

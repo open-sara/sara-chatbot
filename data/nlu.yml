@@ -18,9 +18,23 @@ nlu:
     - heelo
     - Hello
     - Hi
+    - heyy
+    - sup
+    - What's up
+    - What is up
+    - How's it going
+    - @sarazazen_chatbot
+    - @sara
+    - @sarachatbot
+- intent: sleep
+  examples: |
+    - Sleeplessness Management
 - intent: mood_check
   examples: |
     - Mood Check
+- intent: motivation_productivity
+  examples: |
+    - Motivation and Productivity
 - intent: chitchat
   examples: |
     - Casual chitchat
@@ -47,6 +61,12 @@ nlu:
     - Jumping to conclusion? What is that?
     - What is jumping to conclusion?
     - Can you explain jumping to conclusion?
+- intent: query_filtering
+  examples: |
+    - What is Filtering thoughts?
+    - Filtering thoughts? what does it mean?
+    - I don't know what is filtering, can you explain?
+    - What is filtering thoughts?
 - intent: query_distortion
   examples: |
     - What is distortion?
@@ -57,6 +77,12 @@ nlu:
     - Can you give some jumping to conclusion examples?
     - I didn't understand. Do you have any examples for jumping to conclusion?
     - Can you give some examples of Jumping to conclusion?
+- intent: ex_filtering
+  examples: |
+    - Examples of filtering please?
+    - Could you give examples of filtering?
+    - Some examples of filtering thoughts?
+    - Can you give some examples of filtering?
 - intent: thought_desc
   examples: |
     - [exam](worry_related_to)
@@ -84,6 +110,80 @@ nlu:
     - I have [exams](worry_related_to)
     - we have [exams](worry_related_to) next week
     - [exams](worry_related_to) are coming
+    - I have many [assignments](worry_related_to) deadlines
+    - Yesterday's [presentation](worry_related_to) did not go well
+    - really hard [assignment](worry_related_to) I don't know how to start
+    - I am worried about my [health](worry_related_to)
+    - I not feeling well, worried about my [health](worry_related_to)
+    - [health](worry_related_to) is not good
+    - [health](worry_related_to)
+    - [job](worry_related_to)
+    - [assignments](worry_related_to)
+    - [presentation](worry_related_to)
+    - I have so many [assignments](worry_related_to)
+    - Too many [assignments](worry_related_to)
+    - I have too many [assignments](worry_related_to)
+    - I have a lot of [assinmentss](worry_related_to)
+    - I am worried about [exams](worry_related_to)
+    - I am anxious about my [exams](worry_related_to)
+    - a lot of [assignments](worry_related_to)
+    - [exams](worry_related_to)
+    - i am anxious about [exams](worry_related_to)
+    - too many [projects](worry_related_to)
+    - I [don't feel very well]{"entity": "worry_related_to", "value": "health"}
+    - I hate [exams](worry_related_to)
+    - I hate [assignments](worry_related_to)
+    - I don't like [exams](worry_related_to)
+    - I am [not feeling well]{"entity": "worry_related_to", "value": "health"}
+    - I am [not feeling very well]{"entity": "worry_related_to", "value": "health"}
+    - I [don't feel well]{"entity": "worry_related_to", "value": "health"}
+    - I feel [unwell]{"entity": "worry_related_to", "value": "health"}
+    - I am [sick]{"entity": "worry_related_to", "value": "health"}
+    - I am [not well]{"entity": "worry_related_to", "value": "health"}
+    - I am in [hospital]{"entity": "worry_related_to", "value": "health"}
+    - I hate [hospital]{"entity": "worry_related_to", "value": "health"}
+    - I have [medical]{"entity": "worry_related_to", "value": "health"} issues
+    - I have [corona]{"entity": "worry_related_to", "value": "health"}
+    - I have [covid]{"entity": "worry_related_to", "value": "health"}
+    - I hate [corona]{"entity": "worry_related_to", "value": "health"}
+    - I hate [covid]{"entity": "worry_related_to", "value": "health"}
+    - I am suffering through [insomnia]{"entity": "worry_related_to", "value": "sleep"}
+    - I've been having [insomnia]{"entity": "worry_related_to", "value": "sleep"} for a while
+    - I don't feel [sleepy]{"entity": "worry_related_to", "value": "sleep"}
+    - I am [not sleepy]{"entity": "worry_related_to", "value": "sleep"}
+    - I feel [sleepy]{"entity": "worry_related_to", "value": "sleep"} during the whole day
+    - I am not able to [sleep](worry_related_to)
+    - I am unable to [sleep](worry_related_to)
+    - My [sleep](worry_related_to) cycle is distorted
+    - I had a [breakup]{"entity": "worry_related_to", "value": "relationship"} recently
+    - [breakup]{"entity": "worry_related_to", "value": "relationship"}
+    - I had a [fight]{"entity": "worry_related_to", "value": "relationship"} with friend
+    - I had a [fight]{"entity": "worry_related_to", "value": "relationship"} with parents
+    - She is [not talking]{"entity": "worry_related_to", "value": "relationship"} to me
+    - He is [not talking]{"entity": "worry_related_to", "value": "relationship"} to me
+    - She has [stopped talking]{"entity": "worry_related_to", "value": "relationship"} to me
+    - He has [stopped talking]{"entity": "worry_related_to", "value": "relationship"} to me
+    - She has [blocked]{"entity": "worry_related_to", "value": "relationship"} me
+    - He has [blocked]{"entity": "worry_related_to", "value": "relationship"} me
+    - I am lagging behind in my [studies](worry_related_to)
+    - Not able to [study](worry_related_to)
+    - Not able to concentrate on [studies](worry_related_to)
+    - Unable to [study](worry_related_to)
+    - I am not able to decide my [career](worry_related_to)
+    - My [career](worry_related_to)
+    - Incomplete [submissions]{"entity": "worry_related_to", "value": "assignments"}
+    - Incomplete [submission]{"entity": "worry_related_to", "value": "assignments"}
+    - A lot of [submissions]{"entity": "worry_related_to", "value": "assignments"}
+    - [life](worry_related_to)
+    - [life](worry_related_to) in general
+    - I got less [marks]{"entity": "worry_related_to", "value": "academics"}
+    - I got bad [grades]{"entity": "worry_related_to", "value": "academics"}
+    - I did not get good [grades]{"entity": "worry_related_to", "value": "academics"}
+    - I lost a [grade]{"entity": "worry_related_to", "value": "academics"}
+    - I got a low [rank]{"entity": "worry_related_to", "value": "academics"}
+    - didn't get good [marks]{"entity": "worry_related_to", "value": "academics"}
+    - got below average [marks]{"entity": "worry_related_to", "value": "academics"}
+    - didn't get full [marks]{"entity": "worry_related_to", "value": "academics"}
 - intent: worry_true_percentage
   examples: |
     - [50](percentage)
@@ -117,6 +217,8 @@ nlu:
     - I couldn't answer some questions in class
     - I did not understand the subject
     - I was not understand the subject
+    - I have very little time to work on the [assignments](worry_related_to)
+    - I didn't understand the concepts well
 - intent: counter_thought
   examples: |
     - I worked hard and practiced many questions
@@ -137,6 +239,7 @@ nlu:
     - I worked hard
     - The topics I didn't understand most probably won't be asked in the exam
     - I practised questions
+    - I studied hard
 - intent: goodbye
   examples: |
     - It was nice talking to you
@@ -163,6 +266,8 @@ nlu:
     - alright
     - aight
     - Ok
+    - okay
+    - Understood
 - intent: affirm
   examples: |
     - yes
@@ -178,6 +283,17 @@ nlu:
     - Yes
     - yes, thanks!
     - Yeah
+    - yup
+    - yo
+    - Yep
+    - yeah
+    - Kind of
+    - Very
+    - Very much
+    - yus
+    - yas
+    - yaa
+    - sort of
 - intent: deny
   examples: |
     - no
@@ -188,6 +304,11 @@ nlu:
     - no way
     - not really
     - No
+    - nope
+    - disagree
+    - No I haven't
+    - I have not
+    - No I have not
 - intent: mood_great
   examples: |
     - perfect
@@ -203,26 +324,35 @@ nlu:
     - extremely good
     - so so perfect
     - so good
+    - I feel nice!
+    - I feel great!
+    - I feel good!
     - so perfect
     - I am Great!
+    - very happy
+    - I am feeling happy
+    - 😃
+    - 😊
+    - 😍
+    - 🤩
 - intent: mood_unhappy
   examples: |
     - my day was horrible
     - I am sad
-    - I don't feel very well
     - I am disappointed
     - super sad
     - I'm so sad
     - sad
-    - very sad
     - unhappy
     - not good
-    - not very good
     - extremly sad
     - so saad
     - so sad
     - upset
     - I am upset
+    - 😭
+    - 😢
+    - ☹️
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -230,11 +360,14 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
     - who are you?
+    - what is your name?
 - intent: mood_neutral
   examples: |
     - Neutral
     - I feel neutral
     - Neither happy nor sad
+    - Don't feel anything
+    - Emotion less
 - intent: stress
   examples: |
     - Stressed
@@ -247,6 +380,8 @@ nlu:
     - It was pretty hectic, and I am nowhere near to completing my work
     - I am really busy nowadays
     - Coming week is my quiz week and I need to prepare for all the exams, I am really stressed
+    - I want holidays
+    - Depressed and stressed
 - intent: stress_desc
   examples: |
     - In the upcoming week I have many assignment deadlines, only thinking of which I am getting tired of
@@ -258,9 +393,9 @@ nlu:
     - Do you have any examples of catastrophizing?
 - intent: query_catastrophizing
   examples: |
-    - What is catastrophizing?
     - Can you explain catastrophizing?
     - Catastrophizing? What is that?
+    - What is catastrophizing?
 - intent: ask_fav_book
   examples: |
     - what is your favourite book?
@@ -270,11 +405,114 @@ nlu:
     - Which book do you like?
     - What is the novel you like to read?
     - what is your favourite book
+- intent: ask_fav_song
+  examples: |
+    - what is your favourite song?
+    - what's your favourite song
+    - so what is your favourite song
+    - ok what's your favourite song?
+    - Which song do you like?
+    - What is the song you like to hear?
+    - what is your favourite song
+- intent: ask_fav_movie
+  examples: |
+    - what is your favourite movie?
+    - what's your favourite movie
+    - so what is your favourite movie
+    - ok what's your favourite movie?
+    - Which movie do you like?
+    - What is the movie you like to watch?
+    - what is your favourite movie
+- intent: ask_fav_hobby
+  examples: |
+    - what is your hobby?
+    - what are your hobbies?
+    - what's your hobby
+    - so what is your hobby
+    - so what are your hobbies
+    - ok what's your hobby?
+    - ok what are your hobbies?
+    - What do you like doing in free time?
+    - I am in hospital
 - intent: try_bot_fav
   examples: |
     - ok i'll try it
     - ok I will try it
     - ok I will try that
+    - I will try that
+    - sure
+    - Yaa sure
+    - Thanks for the suggestion, I will try that
+    - 👍
+    - ✌️
+- intent: tell_joke
+  examples: |
+    - tell me a joke
+    - can you tell a joke?
+    - joke
+    - I want to laugh
+    - could you tell something funny?
+    - funny text please
+- intent: tell_quote
+  examples: |
+    - tell me a quote
+    - can you tell me a quote?
+    - quote
+    - motivational quote
+    - inspirational quote
+- intent: had_laugh
+  examples: |
+    - Ha ha
+    - Lol
+    - Haa Haa Haa
+    - 😄
+    - 😁
+    - 😆
+    - 🤣
+    - 😂
 - intent: chit_chat
   examples: |
     - chit_chat
+- intent: tell_story
+  examples: |
+    - Tell me a story
+    - I want to hear a story
+    - could you tell me a story
+    - story time
+    - tell me a story
+- synonym: health
+  examples: |
+    - don't feel very well
+    - not feeling well
+    - not feeling very well
+    - don't feel well
+    - unwell
+    - sick
+    - not well
+    - hospital
+    - medical
+    - corona
+    - covid
+    - feel unwell
+- synonym: sleep
+  examples: |
+    - insomnia
+    - sleepy
+    - not sleepy
+- synonym: relationship
+  examples: |
+    - breakup
+    - fight
+    - not talking
+    - stopped talking
+    - blocked
+- synonym: assignments
+  examples: |
+    - submission
+    - submissions
+- synonym: academics
+  examples: |
+    - marks
+    - grades
+    - grade
+    - rank

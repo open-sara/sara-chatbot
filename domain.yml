@@ -5,6 +5,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- sleep:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -55,8 +57,35 @@ intents:
     use_entities: true
 - try_bot_fav:
     use_entities: true
+- chit_chat:
+    use_entities: true
+- ask_fav_song:
+    use_entities: true
+- ask_fav_movie:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- ask_fav_hobby:
+    use_entities: true
+- ex_filtering:
+    use_entities: true
+- query_filtering:
+    use_entities: true
+- tell_joke:
+    use_entities: true
+- tell_story:
+    use_entities: true
+- restart:
+    use_entities: true
+- start:
+    use_entities: true
+- had_laugh:
+    use_entities: true
+- motivation_productivity:
+    use_entities: true
+- tell_quote:
+    use_entities: true
 entities:
-- name
 - worry_related_to
 - percentage
 slots:
@@ -65,11 +94,6 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
-  name:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
 responses:
   utter_yes:
   - text: Sure!
@@ -90,6 +114,8 @@ responses:
       title: What is that?
     - payload: Yes
       title: Yes
+    - payload: No
+      title: No
     text: We can attempt to improve your mood by recognizing negative patterns and reframe the negative thoughts into positive ones. One way to do this is to spot the 'distortion' in your thoughts? Are you ready to spot it?
   utter_info_distortion:
   - buttons:
@@ -105,7 +131,7 @@ responses:
     text: Let's spot if any cognitive distortions are leading to your thoughts. Are you ready?
   utter_ask_catastrophizing:
   - buttons:
-    - payload: Catastrophizing? What is that?
+    - payload: Can you explain catastrophizing?
       title: What is that?
     - payload: Yes
       title: Yes
@@ -148,6 +174,23 @@ responses:
     - payload: No
       title: No
     text: Are you predicting the future or reading someone's mind in this thought (jumping to conclusions)?
+  utter_is_filtering:
+  - buttons:
+    - payload: What is filtering thoughts?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Is your thought an example of “filtering” i.e. are you looking at just the negative side?
+  - buttons:
+    - payload: What is Filtering thoughts?
+      title: What is that?
+    - payload: Yes
+      title: Yes
+    - payload: No
+      title: No
+    text: Are you applying a filter to your thoughts and just considering the negative side of it?
   utter_info_jumping_to_conclusion:
   - buttons:
     - payload: Can you give some examples of Jumping to conclusion?
@@ -155,11 +198,23 @@ responses:
     - payload: Ok
       title: Ok
     text: Jumping to conclusions is one of the most common forms of negative thinking. The problem with this type of a cognitive distortion is that conclusions are in most cases negative; catastrophically negative. You usually jump to a negative conclusion without any justifiable facts of the situation or reality. In the next step, you start torturing yourself with how unlucky you are.
+  utter_info_filtering:
+  - buttons:
+    - payload: Can you give some examples of filtering?
+      title: Can you give some examples?
+    - payload: Ok
+      title: Ok
+    text: It is filtering out all of the positive information about a specific situation and only allowing in the negative information. In other words, negative filtering is focusing on negative things and discounting positive things.
   utter_ex_jumping_to_conclusion:
   - buttons:
     - payload: Ok
       title: Ok
     text: For example, a student may “fortune-tell” by assuming that the readers of his or her paper have already made up their minds concerning its topic, and, therefore, writing the paper is a pointless exercise. Another example, someone may do “mind-reading” by assuming that some group of people don’t like him/her and they make fun of him/her.
+  utter_ex_filtering:
+  - buttons:
+    - payload: Ok
+      title: Ok
+    text: For example, if you generally make A’s and B’s in a class, but make a lower grade on one assignment, having thoughts about being stupid or a poor student is evidence of negative filtering.
   utter_ask_jumping_to_conclusion_again:
   - buttons:
     - payload: No
@@ -167,6 +222,13 @@ responses:
     - payload: Yes
       title: Yes
     text: So do you think there is any “jumping to conclusions” in your thoughts?
+  utter_ask_filtering_again:
+  - buttons:
+    - payload: No
+      title: No
+    - payload: Yes
+      title: Yes
+    text: So do you feel there is filtering thought distortion in your thoughts?
   utter_found_distortion:
   - text: Ok, so we found a distortion. Now let us try to tackle this.
   utter_jumping_to_conclusion_quote:
@@ -281,6 +343,10 @@ responses:
       title: Anxiety management
     - payload: Casual chitchat
       title: Casual chitchat
+    - payload: Motivation and Productivity
+      title: Motivation and Productivity
+    - payload: Sleeplessness Management
+      title: Sleeplessness Management
     text: Which feature do you want to try?
   utter_ask_mood:
   - buttons:
@@ -297,16 +363,175 @@ responses:
   utter_iamabot:
   - text: My name is Sara Zazen. I am a bot, powered by Rasa.🤖
   utter_chitchat:
-  - text: Ok let's have some fun!
-  - text: Yay let's spend some time talking!
-  - text: Ok let's go!!
+  - text: Ok let's have some fun! Ask me about my favorite book, movie or song. I can also tell you jokes, quotes and stories 😀
+  - text: Yay let's spend some time talking! Ask me about my favorite book, movie or song. I can also tell you jokes, quotes and stories 😀
+  - text: Ok let's go!! Ask me about my favorite book, movie, song or hobby. I can also tell you jokes, quotes and stories 😀
+  utter_fav_hobby:
+  - image: https://images.unsplash.com/photo-1554080353-a576cf803bda?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+    text: I love photography, I think its nice way of spending your time. Do you like photography too?
   utter_fav_book:
-  - text: To Kill a Mockingbird by Harper Lee is my favourite classic. It's just too well written. Have you read it?
+  - image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/330px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg
+    text: To Kill a Mockingbird by Harper Lee is my favourite classic. It's just too well written. Have you read it?
+  - image: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1534298934l/862041._SX318_.jpg
+    text: I like the Harry Potter book series. Have you read it?
+  utter_fav_song:
+  - image: https://images.unsplash.com/photo-1518893883800-45cd0954574b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhbW9waG9uZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+    text: I like old Hindi movie songs. I feel they are really soothing. Do you like them too?
+  - image: https://images.unsplash.com/photo-1462965326201-d02e4f455804?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fG11c2ljfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+    text: I like English songs... its fun to listen to them. Do you hear English songs?
+  utter_fav_movie:
+  - text: I like to watch thriller suspense based movies, Do you like them?
+  - text: I like comedy films. It is fun to watch them. Do you like comedy genre?
+  - text: Titanic is my favorite movie. Have you watched it?
   utter_read_fav:
   - text: You should read it! It's an eye-opener
+  utter_listen_fav:
+  - text: You should try listening to them. It is really fun!🥳
+  utter_watch_fav:
+  - text: Try watching some movies of this genre. You will enjoy them!
+  utter_try_hobby:
+  - text: Try doing some photography or follow any hobby you like in your free time. It will help calm your mind and relax a bit!
+  utter_default:
+  - text: Sorry, I didn't understand ☹️  Could you please restart the conversation... Just type 'Hello'
+  utter_photo_mood1:
+  - buttons:
+    - payload: Great
+      title: Cheerful and fresh!
+    - payload: Sad
+      title: Cold and sad
+    image: https://cdn.rgda.in/wp-content/uploads/2020/08/Odisha-Rain.jpg
+    text: What do you feel after looking at the picture?
+  utter_photo_mood2:
+  - buttons:
+    - payload: Great
+      title: Warm and Bright!
+    - payload: Sad
+      title: Too much heat...
+    image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS97rvl1pfZYGy4wE1abPOGhAavaSb7SqTXSQ&usqp=CAU
+    text: What do you feel after looking at the picture?
+  utter_mood_guide:
+  - text: The way we percieve the world highly depends on the way our current mind state is. The same sunny day can be refreshing for some one and not so happy for some one else. The world around is beatiful the way it is, we just need to change our perspective.
+  utter_photo_mood_great:
+  - image: https://thumbs.dreamstime.com/b/creative-rainbow-gradient-line-drawing-cartoon-word-great-original-153114819.jpg
+    text: Thats great buddy! Keep going...
+  utter_tell_joke:
+  - image: https://i.pinimg.com/564x/76/4a/c9/764ac9e89e09e05ee1d4d74e03159629.jpg
+    text: Let's have some fun!
+  - image: https://i.pinimg.com/564x/7a/5c/f8/7a5cf8bb354ace9b2d86dcb01c237324.jpg
+    text: Laughter is an instant vacation 😀
+  - image: https://i.pinimg.com/236x/0c/82/b7/0c82b7b695fc06e07f5abc40cc96b7c6.jpg
+    text: A good laugh heals a lot of hurts.
+  utter_was_it_funny:
+  - text: Did you have a laugh?
+  - text: Was it funny?
+  utter_tell_story:
+  - image: https://i.pinimg.com/474x/a9/78/38/a97838b531e7238fe534a33672fed898.jpg
+    text: Here is a small story for you
+  - image: https://i.pinimg.com/564x/b7/0c/f7/b70cf7577c75ad6caf9bcc2056d4957a.jpg
+    text: Here is a small story for you
+  - image: https://i.pinimg.com/564x/03/b9/76/03b97675ba56f137e771d5dcb854e135.jpg
+    text: Here is a small story for you
+  - image: https://i.pinimg.com/564x/20/ed/92/20ed9221cd36583164158d7e06b3e640.jpg
+    text: Here is a small story for you
+  utter_like_story:
+  - text: Did you like the story?
+  utter_new:
+  - text: Please type 'Hi' to start a new conversation 😀
+  utter_mot1:
+  - buttons:
+    - payload: Yes
+      title: Agree
+    - payload: No
+      title: Disagree
+    image: https://t4.ftcdn.net/jpg/03/01/45/43/360_F_301454329_LZvQ7UzTvJVpmraZxIR3MqmEJpoP1EaD.jpg
+    text: Do you feel energetic and fresh today?
+  utter_mot2:
+  - buttons:
+    - payload: Yes
+      title: Yes!
+    - payload: No
+      title: Nope
+    image: https://warnercnr.colostate.edu/wp-content/uploads/sites/2/2017/04/shutterstock_428626417-1024x683.jpg
+    text: Are you in a mood to try new things? May be take on some adventure?
+  utter_mot3:
+  - buttons:
+    - payload: Yes
+      title: Agree
+    - payload: No
+      title: Disagree
+    text: At times, I think I am no good at all.
+  utter_mot4:
+  - buttons:
+    - payload: Yes
+      title: Yes!
+    - payload: No
+      title: Nope
+    image: https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2018Q1/smart-goals/smart-goals-header@2x.png
+    text: Do you feel like putting efforts towards your goal?
+  utter_motive_happy:
+  - text: That's great buddy! you are truly motivated and quite satisfied in your life. I am happy for you 😀
+  utter_motive_sad:
+  - image: https://i.pinimg.com/564x/51/3c/2f/513c2f94221b094deb187d62defc18df.jpg
+    text: Hey buddy, its natural to feel demotivated sometimes. But we shall remember to stay motivated as the best is yet to come 😀
+  utter_try_motive:
+  - buttons:
+    - payload: Yes
+      title: Lets go!
+    - payload: No
+      title: Maybe later
+    text: Do you want to take a small test?
+  utter_tell_quote:
+  - image: https://i.pinimg.com/564x/a2/65/ea/a265ea4942aab3306e624076f2f02459.jpg
+    text: Here is a quote for you
+  - image: https://i.pinimg.com/originals/4d/4a/38/4d4a38141a8f1f110e58b4766c78c4c6.jpg
+    text: Here is a quote for you
+  - image: https://funnyfunnyjokes.org/wp-content/uploads/2017/11/23472241_10155653546340985_2248262133182771676_n-1.jpg
+    text: Here is a quote for you
+  - image: https://www.thehealthy.com/wp-content/uploads/2020/08/funny-motivational-quotes_01.jpg
+    text: Here is a quote for you 😁
+  - image: https://shayri.page/wp-content/uploads/2021/02/25-Of-The-Best-Motivational-Quotes-Ever-The-Funny.jpg
+    text: Here is a quote for you
+  utter_like_quote:
+  - text: Did you like the quote?
+  utter_ask_sleep:
+  - text: Have you been able to sleep well recently?
+  utter_why_sleep:
+  - text: What has been troubling you recently?
+  utter_ask_sleep_again:
+  - text: Do you feel sleepier?
+  utter_sleep_quote1:
+  - text: Ok first relax and lie down on your bed. Now take slow deep breaths and try to relax as much as possible
+  utter_sleep_quote2:
+  - text: Why not go outside and jog around for a minute. This will help you clear your mind and will also make you tired so that you could sleep.
+  utter_sleep_quote3:
+  - text: Why not try and meditate for some time. It will help clear your mind from your worries and will help you gain a new perspective on things.
+  utter_sleep_again:
+  - text: Want to try again with another method?
+  utter_sleep_sad:
+  - text: No problem! We can try to fix the issue again next time
+  utter_sleep_end:
+  - text: Remember to not let the negative thoughts control you too much, and try to focus on the positive things in life. Hope you have a good sleep for many days to come. 
+  utter_sleep_info:
+  - text: Because of the many negative thoughts that go throughout your head, you are not able to calm down and sleep properly. Here are some suggestions that will help you escape from your worries and clear your head.
 actions:
 - utter_chitchat
 - utter_fav_book
 - utter_read_fav
+- utter_fav_song
+- utter_listen_fav
+- utter_fav_movie
+- utter_watch_fav
+- utter_tell_story
+- utter_like_story
+- utter_new
+- utter_mot1
+- utter_mot2
+- utter_mot3
+- utter_mot4
+- utter_motive_happy
+- utter_motive_sad
+- utter_try_motive
+- utter_tell_quote
+- utter_like_quote
 forms: {}
 e2e_actions: []

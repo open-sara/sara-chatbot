@@ -1,0 +1,175 @@
+version: "2.0"
+stories:
+  - story: sleep  happy 12
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: affirm
+      - action: utter_sleep_end
+      - action: utter_photo_mood_great
+      - action: utter_new
+
+  - story: sleep  happy 21
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: deny
+      - action: utter_why_sleep
+      - or:
+        - intent: anxiety
+        - intent: stress
+        - intent: worry_evidence
+        - intent: mood_unhappy
+      - action: utter_sleep_info
+      - action: utter_sleep_quote1
+      - action: utter_ask_sleep_again
+      - intent: affirm
+      - action: utter_sleep_end
+      - action: utter_photo_mood_great
+      - action: utter_new
+
+  - story: sleep sad  21
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: deny
+      - action: utter_why_sleep
+      - or:
+        - intent: anxiety
+        - intent: stress
+        - intent: worry_evidence
+        - intent: mood_unhappy
+      - action: utter_sleep_info
+      - action: utter_sleep_quote1
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: deny
+      - action: utter_sleep_sad
+      - action: utter_new
+
+  - story: sleep happy  31
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: deny
+      - action: utter_why_sleep
+      - or:
+        - intent: anxiety
+        - intent: stress
+        - intent: worry_evidence
+        - intent: mood_unhappy
+      - action: utter_sleep_info
+      - action: utter_sleep_quote1
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: affirm
+      - action: utter_sleep_quote2
+      - action: utter_ask_sleep_again
+      - intent: affirm
+      - action: utter_sleep_end
+      - action: utter_photo_mood_great
+      - action: utter_new
+
+  - story: sleep sad  31
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: deny
+      - action: utter_why_sleep
+      - or:
+        - intent: anxiety
+        - intent: stress
+        - intent: worry_evidence
+        - intent: mood_unhappy
+      - action: utter_sleep_info
+      - action: utter_sleep_quote1
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: affirm
+      - action: utter_sleep_quote2
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: deny
+
+      - action: utter_sleep_sad
+      - action: utter_new
+  - story: sleep sad  32
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: deny
+      - action: utter_why_sleep
+      - or:
+        - intent: anxiety
+        - intent: stress
+        - intent: worry_evidence
+        - intent: mood_unhappy
+      - action: utter_sleep_info
+      - action: utter_sleep_quote1
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: affirm
+      - action: utter_sleep_quote2
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: affirm
+      - action: utter_sleep_quote3
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_sad
+      - action: utter_new
+  - story: sleep happy  32
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_menu
+      - intent: sleep
+      - action: utter_ask_sleep
+      - intent: deny
+      - action: utter_why_sleep
+      - or:
+        - intent: anxiety
+        - intent: stress
+        - intent: worry_evidence
+        - intent: mood_unhappy
+      - action: utter_sleep_info
+      - action: utter_sleep_quote1
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: affirm
+      - action: utter_sleep_quote2
+      - action: utter_ask_sleep_again
+      - intent: deny
+      - action: utter_sleep_again
+      - intent: affirm
+      - action: utter_sleep_quote3
+      - action: utter_ask_sleep_again
+      - intent: affirm
+      - action: utter_sleep_end
+      - action: utter_photo_mood_great
+      - action: utter_new

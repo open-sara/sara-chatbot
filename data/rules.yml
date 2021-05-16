@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Display message for nlu fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+- rule: Display message after start
+  steps:
+  - intent: start
+  - action: utter_new

@@ -1,0 +1,58 @@
+version: "2.0"
+stories:
+- story: Story story happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: tell_quote
+  - action: utter_tell_quote
+  - action: utter_like_quote
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: Story story sad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: tell_quote
+  - action: utter_tell_quote
+  - action: utter_like_quote
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_new
+- story: Story story happy botch1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: tell_quote
+  - action: utter_tell_quote
+  - action: utter_like_quote
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: Story joke sad botch1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: tell_quote
+  - action: utter_tell_quote
+  - action: utter_like_quote
+  - intent: deny
+  - action: utter_goodbye
+  - action: utter_new

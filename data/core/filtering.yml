@@ -1,6 +1,6 @@
 version: "2.0"
 stories:
-- story: jumping to conclusion happy path
+- story: filtering happy path
   steps:
   - intent: greet
   - action: utter_greet
@@ -27,126 +27,6 @@ stories:
   - action: utter_ex_catastrophizing
   - intent: got_it
   - action: utter_ask_catastrophizing_again
-  - intent: affirm
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: ex_jumping_to_conclusion
-  - action: utter_yes
-  - action: utter_ex_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: affirm
-  - action: utter_found_distortion
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 1_2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: ex_catastrophizing
-  - action: utter_yes
-  - action: utter_ex_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: affirm
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: ex_jumping_to_conclusion
-  - action: utter_yes
-  - action: utter_ex_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: query_filtering
-  - intent: affirm
-  - action: utter_found_distortion
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 1_3
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
   - intent: deny
   - action: utter_is_jumping_to_conclusion
   - intent: query_jumping_to_conclusion
@@ -156,126 +36,6 @@ stories:
   - action: utter_ex_jumping_to_conclusion
   - intent: got_it
   - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: query_filtering
-  - action: utter_info_filtering
-  - intent: got_it
-  - action: utter_ask_filtering_again
-  - intent: affirm
-  - action: utter_found_distortion
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 1_4
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: query_distortion
-  - action: utter_info_distortion
-  - intent: got_it
-  - action: utter_ask_spot distortion_again
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: deny
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: ex_jumping_to_conclusion
-  - action: utter_yes
-  - action: utter_ex_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: query_filtering
-  - action: utter_info_filtering
-  - intent: got_it
-  - action: utter_ask_filtering_again
-  - intent: deny
-  - action: utter_found_distortion
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: ex_catastrophizing
-  - action: utter_yes
-  - action: utter_ex_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: deny
-  - action: utter_is_jumping_to_conclusion
   - intent: affirm
   - action: utter_is_filtering
   - intent: query_filtering
@@ -312,7 +72,7 @@ stories:
   - intent: affirm
   - action: utter_happy
   - action: utter_new
-- story: jumping to conclusion happy path 2_2
+- story: filtering happy path 1_2
   steps:
   - intent: greet
   - action: utter_greet
@@ -326,15 +86,22 @@ stories:
   - intent: affirm
   - action: utter_worry_identified
   - action: utter_ask_spot_distortion
-  - intent: query_distortion
-  - action: utter_info_distortion
-  - intent: got_it
-  - action: utter_ask_spot distortion_again
   - intent: affirm
   - action: utter_ask_catastrophizing
-  - intent: affirm
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: ex_catastrophizing
+  - action: utter_yes
+  - action: utter_ex_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
   - action: utter_is_jumping_to_conclusion
-  - intent: affirm
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: deny
   - action: utter_is_filtering
   - intent: query_filtering
   - action: utter_info_filtering
@@ -343,8 +110,8 @@ stories:
   - action: utter_ex_filtering
   - intent: got_it
   - action: utter_ask_filtering_again
-  - intent: deny
-  - action: utter_found_distortion
+  - intent: affirm
+  - action: utter_found_distortion 
   - action: utter_cognitive_restructuring
   - intent: affirm
   - action: utter_ask_worry_true_percentage
@@ -370,245 +137,7 @@ stories:
   - intent: affirm
   - action: utter_happy
   - action: utter_new
-- story: jumping to conclusion happy path 2_3
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: query_distortion
-  - action: utter_info_distortion
-  - intent: got_it
-  - action: utter_ask_spot distortion_again
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: affirm
-  - action: utter_is_jumping_to_conclusion
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: deny
-  - action: utter_found_distortion
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 3
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: query_distortion
-  - action: utter_info_distortion
-  - intent: got_it
-  - action: utter_ask_spot distortion_again
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: ex_catastrophizing
-  - action: utter_yes
-  - action: utter_ex_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: deny
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: deny
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 3_2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: query_distortion
-  - action: utter_info_distortion
-  - intent: got_it
-  - action: utter_ask_spot distortion_again
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: deny
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: query_filtering
-  - action: utter_info_filtering
-  - intent: got_it
-  - action: utter_ask_filtering_again
-  - intent: affirm
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion happy path 3_3
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: deny
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: query_filtering
-  - action: utter_info_filtering
-  - intent: got_it
-  - action: utter_ask_filtering_again
-  - intent: deny
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
-  - action: utter_cognitive_restructuring
-  - intent: affirm
-  - action: utter_ask_worry_true_percentage
-  - intent: worry_true_percentage
-    entities:
-    - percentage: '50'
-  - action: utter_ask_worry_evidence
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: worry_evidence
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_ask_counter_thought
-  - action: utter_any_more
-  - intent: affirm
-  - action: utter_carry_on
-  - intent: counter_thought
-  - action: utter_any_more
-  - intent: deny
-  - action: utter_complete_cbt
-  - intent: got_it
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-  - action: utter_new
-- story: jumping to conclusion sad path
+- story: filtering happy path 1_3
   steps:
   - intent: greet
   - action: utter_greet
@@ -626,9 +155,6 @@ stories:
   - action: utter_ask_catastrophizing
   - intent: query_catastrophizing
   - action: utter_info_catastrophizing
-  - intent: ex_catastrophizing
-  - action: utter_yes
-  - action: utter_ex_catastrophizing
   - intent: got_it
   - action: utter_ask_catastrophizing_again
   - intent: deny
@@ -649,15 +175,531 @@ stories:
   - action: utter_ex_filtering
   - intent: got_it
   - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
   - intent: deny
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering happy path 1_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: ex_jumping_to_conclusion
+  - action: utter_yes
+  - action: utter_ex_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: ex_catastrophizing
+  - action: utter_yes
+  - action: utter_ex_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+  - action: utter_new
+- story: filtering happy path 2_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: deny
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering happy path 2_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering happy path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: ex_catastrophizing
+  - action: utter_yes
+  - action: utter_ex_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering happy path 3_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering happy path 3_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: deny
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: affirm
+  - action: utter_ask_worry_true_percentage
+  - intent: worry_true_percentage
+    entities:
+    - percentage: '50'
+  - action: utter_ask_worry_evidence
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: worry_evidence
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_ask_counter_thought
+  - action: utter_any_more
+  - intent: affirm
+  - action: utter_carry_on
+  - intent: counter_thought
+  - action: utter_any_more
+  - intent: deny
+  - action: utter_complete_cbt
+  - intent: got_it
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_new
+- story: filtering sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: ex_catastrophizing
+  - action: utter_yes
+  - action: utter_ex_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: ex_jumping_to_conclusion
+  - action: utter_yes
+  - action: utter_ex_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
+  - action: utter_yes
+  - action: utter_ex_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: deny
+  - action: utter_found_distortion 
   - action: utter_cognitive_restructuring
   - intent: deny
   - action: utter_support
   - action: utter_goodbye
   - action: utter_new
-- story: jumping to conclusion sad path 1_2
+- story: filtering sad path 1_2
   steps:
   - intent: greet
   - action: utter_greet
@@ -697,14 +739,13 @@ stories:
   - intent: got_it
   - action: utter_ask_filtering_again
   - intent: deny
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
+  - action: utter_found_distortion 
   - action: utter_cognitive_restructuring
   - intent: deny
   - action: utter_support
   - action: utter_goodbye
   - action: utter_new
-- story: jumping to conclusion sad path 1_3
+- story: filtering sad path 1_3
   steps:
   - intent: greet
   - action: utter_greet
@@ -733,107 +774,23 @@ stories:
   - action: utter_ex_jumping_to_conclusion
   - intent: got_it
   - action: utter_ask_jumping_to_conclusion_again
-  - intent: affirm
+  - intent: deny
   - action: utter_is_filtering
-  - intent: affirm
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
-  - action: utter_cognitive_restructuring
-  - intent: deny
-  - action: utter_support
-  - action: utter_goodbye
-  - action: utter_new
-- story: jumping to conclusion sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: deny
-  - action: utter_ask_reframe_worry
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: ex_catastrophizing
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: ex_filtering
   - action: utter_yes
-  - action: utter_ex_catastrophizing
+  - action: utter_ex_filtering
   - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: deny
-  - action: utter_is_jumping_to_conclusion
-  - intent: query_jumping_to_conclusion
-  - action: utter_info_jumping_to_conclusion
-  - intent: ex_jumping_to_conclusion
-  - action: utter_yes
-  - action: utter_ex_jumping_to_conclusion
-  - intent: got_it
-  - action: utter_ask_jumping_to_conclusion_again
+  - action: utter_ask_filtering_again
   - intent: affirm
-  - action: utter_is_filtering
-  - intent: deny
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
+  - action: utter_found_distortion 
   - action: utter_cognitive_restructuring
   - intent: deny
   - action: utter_support
   - action: utter_goodbye
   - action: utter_new
-- story: jumping to conclusion sad path 2_2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_menu
-  - intent: anxiety
-  - action: utter_ask_thought
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: deny
-  - action: utter_ask_reframe_worry
-  - intent: thought_desc
-    entities:
-    - worry_related_to: exam
-  - action: utter_worry_relation
-  - intent: affirm
-  - action: utter_worry_identified
-  - action: utter_ask_spot_distortion
-  - intent: query_distortion
-  - action: utter_info_distortion
-  - intent: got_it
-  - action: utter_ask_spot distortion_again
-  - intent: affirm
-  - action: utter_ask_catastrophizing
-  - intent: query_catastrophizing
-  - action: utter_info_catastrophizing
-  - intent: got_it
-  - action: utter_ask_catastrophizing_again
-  - intent: affirm
-  - action: utter_is_jumping_to_conclusion
-  - intent: affirm
-  - action: utter_is_filtering
-  - intent: affirm
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
-  - action: utter_cognitive_restructuring
-  - intent: deny
-  - action: utter_support
-  - action: utter_goodbye
-  - action: utter_new
-- story: jumping to conclusion sad path 2_3
+- story: filtering sad path 2
   steps:
   - intent: greet
   - action: utter_greet
@@ -859,9 +816,23 @@ stories:
   - action: utter_ask_spot distortion_again
   - intent: affirm
   - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: ex_catastrophizing
+  - action: utter_yes
+  - action: utter_ex_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
   - intent: deny
   - action: utter_is_jumping_to_conclusion
-  - intent: affirm
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: ex_jumping_to_conclusion
+  - action: utter_yes
+  - action: utter_ex_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: deny
   - action: utter_is_filtering
   - intent: query_filtering
   - action: utter_info_filtering
@@ -870,9 +841,104 @@ stories:
   - action: utter_ex_filtering
   - intent: got_it
   - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
   - intent: deny
-  - action: utter_found_distortion
-  - action: utter_jumping_to_conclusion_quote
+  - action: utter_support
+  - action: utter_goodbye
+  - action: utter_new
+- story: filtering sad path 2_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: deny
+  - action: utter_ask_reframe_worry
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: query_catastrophizing
+  - action: utter_info_catastrophizing
+  - intent: got_it
+  - action: utter_ask_catastrophizing_again
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: ex_jumping_to_conclusion
+  - action: utter_yes
+  - action: utter_ex_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: deny
+  - action: utter_is_filtering
+  - intent: query_filtering
+  - action: utter_info_filtering
+  - intent: got_it
+  - action: utter_ask_filtering_again
+  - intent: affirm
+  - action: utter_found_distortion 
+  - action: utter_cognitive_restructuring
+  - intent: deny
+  - action: utter_support
+  - action: utter_goodbye
+  - action: utter_new
+- story: filtering sad path 2_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: anxiety
+  - action: utter_ask_thought
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: deny
+  - action: utter_ask_reframe_worry
+  - intent: thought_desc
+    entities:
+    - worry_related_to: exam
+  - action: utter_worry_relation
+  - intent: affirm
+  - action: utter_worry_identified
+  - action: utter_ask_spot_distortion
+  - intent: query_distortion
+  - action: utter_info_distortion
+  - intent: got_it
+  - action: utter_ask_spot distortion_again
+  - intent: affirm
+  - action: utter_ask_catastrophizing
+  - intent: deny
+  - action: utter_is_jumping_to_conclusion
+  - intent: query_jumping_to_conclusion
+  - action: utter_info_jumping_to_conclusion
+  - intent: ex_jumping_to_conclusion
+  - action: utter_yes
+  - action: utter_ex_jumping_to_conclusion
+  - intent: got_it
+  - action: utter_ask_jumping_to_conclusion_again
+  - intent: affirm
+  - action: utter_is_filtering
+  - intent: deny
+  - action: utter_found_distortion 
   - action: utter_cognitive_restructuring
   - intent: deny
   - action: utter_support
