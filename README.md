@@ -1,6 +1,6 @@
 # User Manual for Sara
 
-Hello everyone! This is a user manual for an AI-basedchatbot as a part of a course project.
+Hello everyone! This is a user manual for an AI-based chatbot as a part of a course project.
 The chatbot is called Sara Zazen and the bot helps the student community tackle mental
 health issues and maintain mental wellbeing.
 
